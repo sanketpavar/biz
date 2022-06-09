@@ -14,6 +14,8 @@ import {
 } from "firebase/firestore";
 import { db } from "./firebase-config";
 import CreatePostButton from "./components/createPost/CreatePostButton";
+import { Routes, Route } from "react-router-dom";
+import PostDetails from "./pages/Post/Post";
 
 export const AppContext = React.createContext();
 
@@ -29,11 +31,10 @@ export const initialValue = {
 
 function App() {
   const [postStore, setpostStore] = useState([]);
-  const [postModal, setpostModal] = useState(false);
 
-  // !* OPEN CREATE POST MODAL
 
-  const openCreatePost = () => {};
+  
+
 
   //!* GET ALL POSTS ON FIRST VISIT
   useEffect(() => {
@@ -192,9 +193,12 @@ function App() {
       <AppContext.Provider
         value={{ createPost, postStore, votesHandler, addComment }}
       >
-        {/* <CreatePost /> */}
-        {/* <CreatePostButton /> */}
-        <Feed />
+        <Routes>
+          {/* <CreatePost /> */}
+          {/* <CreatePostButton /> */}
+          <Route path="/" element={<Feed />} />
+          <Route path="/postDetails/:postId" element={<PostDetails />} />
+        </Routes>
       </AppContext.Provider>
     </div>
   );
