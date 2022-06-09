@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AppContext } from "../../App";
 import Comments from "../comments/Comments";
 import Header from "../postheader/Header";
+import PostLink from "../postLink/PostLink";
 import Votes from "../votes/Votes";
 
 function Post(props) {
@@ -8,11 +11,11 @@ function Post(props) {
 
   return (
     <div
+    // <div to={{pathname:`/postDetails/${post.id}`}}
       key={post.id}
       className="flex flex-row border max-w-5xl m-5 rounded-lg p-1 bg-white text-sm "
       // className="flex max-w-5xl m-5  text-sm "
     >
-      {/* <div className="flex bg-white rounded-lg p-1"> */}
       {/* VOTES - START */}
       <Votes post={post} />
       {/* VOTES - END */}
@@ -26,7 +29,9 @@ function Post(props) {
         <Comments post={post} />
         {/* COMMENTS - END */}
       </div>
-      {/* </div> */}
+
+      {/* COPY POST LINK TO CLIPBOARD */}
+      <PostLink postId = {post.id}/>
     </div>
   );
 }
