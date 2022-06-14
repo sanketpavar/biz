@@ -9,7 +9,7 @@ function PostLink(props) {
 
   return (
     <>
-    <span className='cursor-pointer' onClick={()=>{copy(`${window.location.href}postDetails/${postId}`)}}><BsClipboardCheck size={25}/></span>
+    <span className='cursor-pointer' onClick={()=>{copy(`${window.location.href}/#/postDetails/${postId}`)}}><BsClipboardCheck size={25}/></span>
     </>
   )
 }

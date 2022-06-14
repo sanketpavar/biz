@@ -9,10 +9,10 @@ import { useParams } from "react-router";
 function PostDetails() {
   const {postId} = useParams()
   const [post, setpost] = useState(null);
-  
   const getDoc = async () => {
     const doc = await getDocById(postId);
-    setpost(doc.data());
+    const newDoc = {...doc.data(), id : doc.id, isSinglePost : true}
+    setpost(newDoc);
   };
   useEffect(() => {
     setpost(getDoc());

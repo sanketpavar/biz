@@ -9,7 +9,7 @@ function Comments(props) {
   const [commentText, setcommentText] = useState("");
 
   const sendComment = (replyTo) => {
-    const data = { commentText, id: post.id, comments: post.comments, replyTo };
+    const data = { commentText, id: post.id, comments: post.comments, replyTo, isSinglePost : post.isSinglePost };
     setcommentText("");
     addComment(data);
     setshowCommentBox(false);
