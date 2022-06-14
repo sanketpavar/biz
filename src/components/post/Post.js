@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import { AppContext } from "../../App";
 import Comments from "../comments/Comments";
 import Header from "../postheader/Header";
 import PostLink from "../postLink/PostLink";
@@ -8,7 +6,6 @@ import Votes from "../votes/Votes";
 
 function Post(props) {
   const { post } = props;
-
   return (
     <div
     // <div to={{pathname:`/postDetails/${post.id}`}}

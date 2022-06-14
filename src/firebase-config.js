@@ -9,24 +9,24 @@ import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 
 // DEVELOPMENT CONFIGURATION
-const firebaseConfig = {
-  apiKey: "AIzaSyDXwgCMlt2KfSBdDY6LyLwvQ7i_zOYvaYE",
-  authDomain: "bnw-forum.firebaseapp.com",
-  projectId: "bnw-forum",
-  storageBucket: "bnw-forum.appspot.com",
-  messagingSenderId: "648651334228",
-  appId: "1:648651334228:web:b18f742b8db9b46b0b03c1",
-};
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDXwgCMlt2KfSBdDY6LyLwvQ7i_zOYvaYE",
+//   authDomain: "bnw-forum.firebaseapp.com",
+//   projectId: "bnw-forum",
+//   storageBucket: "bnw-forum.appspot.com",
+//   messagingSenderId: "648651334228",
+//   appId: "1:648651334228:web:b18f742b8db9b46b0b03c1",
+// };
 
 // PRODUCTION CONFIGURATION
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCDKEMeOzhtiA7NL3qiulOF9fJFCXk1E1g",
-//   authDomain: "bnw-forum-54782.firebaseapp.com",
-//   projectId: "bnw-forum-54782",
-//   storageBucket: "bnw-forum-54782.appspot.com",
-//   messagingSenderId: "716466596340",
-//   appId: "1:716466596340:web:f5c5953580d6d8979771a1",
-// };
+const firebaseConfig = {
+  apiKey: "AIzaSyCDKEMeOzhtiA7NL3qiulOF9fJFCXk1E1g",
+  authDomain: "bnw-forum-54782.firebaseapp.com",
+  projectId: "bnw-forum-54782",
+  storageBucket: "bnw-forum-54782.appspot.com",
+  messagingSenderId: "716466596340",
+  appId: "1:716466596340:web:f5c5953580d6d8979771a1",
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
